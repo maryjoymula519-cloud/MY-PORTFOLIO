@@ -28,7 +28,7 @@
         border-radius: 20px;
         box-shadow: 0 0 10px #fdbb2d, 0 0 20px #b21f1f;
         animation: glow 1.5s infinite alternate;
-        font-size: 0.9rem;
+        font-size: 0.10rem;
       }
       @keyframes glow {
         from { box-shadow: 0 0 5px  #fdbb2d, 0 0 40px #b21f1f; }
@@ -124,6 +124,18 @@
         font-weight: 500;
         text-align: center;
       }
+
+    /* Fix carousel image sizes */
+#servicesCarousel .carousel-item img {
+  height: 450px;          /* fixed height for all slides */
+  object-fit: cover;      /* crop image to fit without distortion */
+  border-radius: 15px;    /* rounded corners */
+  width: 100%;            /* ensure images fill the carousel width */
+  display: block;         /* remove any inline spacing issues */
+}
+
+
+
     </style>
 
     <!-- Typed.js -->
@@ -143,7 +155,8 @@
             <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
             <li class="nav-item"><a class="nav-link" href="#projects">Achievements</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+             <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
           </ul>
           <span class="navbar-text ms-lg-3 satisfaction-badge">★ 100% Client Satisfaction</span>
         </div>
@@ -166,7 +179,7 @@
           </div>
           <!-- RIGHT: Profile Picture -->
           <div class="col-md-6 text-center mt-4 mt-md-0">
-            <img src="Blue Circle Photo Facebook Profile Frame .png" alt="Profile Picture" class="img-fluid hero-img">
+            <img src="IM/Blue Circle Photo Facebook Profile Frame .png" alt="Profile Picture" class="img-fluid hero-img">
           </div>
         </div>
       </div>
@@ -177,12 +190,12 @@
       <h2 class="section-title">About Me</h2>
       <div class="row align-items-center">
         <div class="col-lg-5 mb-4">
-          <img src="Blue Circle Photo Facebook Profile Frame .png" class="img-fluid rounded-circle shadow" alt="Profile">
+          <img src="IM/Blue Circle Photo Facebook Profile Frame .png" class="img-fluid rounded-circle shadow" alt="Profile">
         </div>
         <div class="col-lg-7 text-white">
           <h3>I'm MARY JOY J. MULA</h3>
-          <p>As a future web developer, I’m dedicated to mastering both front-end and back-end development to create responsive, user-friendly websites that stand out on any device.</p>
-          <p>My vision is to design digital experiences that are innovative, impactful, and future-ready. Beyond coding, I embrace creativity, problem-solving, and continuous learning—driven by a passion to grow with the ever-evolving world of technology. </p>
+          <p>I'm an IT student currently studying at St. Paul University Surigao, with a strong passion for becoming a skilled web developer. I'm dedicated to mastering both front-end and back-end development to build responsive, user-friendly websites that stand out on any device.</p>
+          <p>My vision is to create digital experiences that are innovative, impactful, and future-ready. Beyond coding, I value creativity, problem-solving, and continuous learning—driven by a deep passion to grow and thrive in the ever-evolving world of technology. </p>
         </div>
       </div>
     </section>
@@ -194,7 +207,7 @@
         <div class="row g-4">
           <div class="col-md-4">
             <div class="card shadow h-100">
-              <img src="piktor.jpg" class="card-img-top" alt="Project 1">
+              <img src="IM/piktor.jpg" class="card-img-top" alt="Project 1">
               <div class="card-body">
                 <p class="card-text">I worked on designing our assigned topic in the computer lab, focused alongside my classmates.</p>
               </div>
@@ -202,7 +215,7 @@
           </div>
           <div class="col-md-4">
             <div class="card shadow h-100">
-              <img src="majoy (1).jpg" class="card-img-top" alt="Project 2">
+              <img src="IM/majoy (1).jpg" class="card-img-top" alt="Project 2">
               <div class="card-body">
                 <p class="card-text">I proudly hold my certificate of participation 𝑼𝑰/𝑼𝑿 𝑫𝒆𝒔𝒊𝒈𝒏 𝒂𝒏𝒅 𝑷𝒓𝒐𝒕𝒐𝒕𝒚𝒑𝒊𝒏𝒈 𝑾𝒐𝒓𝒌𝒔𝒉𝒐𝒑.</p>
               </div>
@@ -210,7 +223,7 @@
           </div>
           <div class="col-md-4">
             <div class="card shadow h-100">
-              <img src="majoy (2).jpg" class="card-img-top" alt="Project 3">
+              <img src="IM/majoy (2).jpg" class="card-img-top" alt="Project 3">
               <div class="card-body">
                 <p class="card-text">Together with my classmates, we posed after competing in a speed typing contest where we won 3rd place.</p>
               </div>
@@ -220,26 +233,81 @@
       </div>
     </section>
 
+<!-- SERVICES SECTION -->
+<!-- SERVICES CAROUSEL -->
+<section id="services" class="py-5">
+  <div class="container">
+    <h2 class="section-title">Services Offered</h2>
 
-    <!-- CONTACT -->
-    <section id="contact" class="container py-5">
-      <h2 class="section-title">Contact Me</h2>
-      <div class="row">
-        <div class="col-lg-6 text-white mb-4">
-          <p>If you’d like to work together or just say hello, feel free to drop me a message. I’ll get back to you as soon as possible!</p>
-          <ul class="list-unstyled">
-            <li><strong>Email:</strong> maryjoymula519@gmail.com</li>
-            <li><strong>Phone:</strong> +63 9185471882</li>
-            <li><strong>Location:</strong> Philippines</li>
-          </ul>
-          <div class="social-links mt-3">
-            <a href="https://www.facebook.com/mula.danics" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/maryjoy_mula" target="_blank"><i class="fab fa-instagram"></i></a>
-          </div>
+    <div id="servicesCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <img src="IM/Presentation (1).png" class="d-block w-100rounded shadow" alt="UI/UX Design">
         </div>
-        
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <img src="IM/Presentation (2).png" class="d-block w-100 rounded shadow" alt="Marketing Kit Design">
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <img src="IM/Presentation (3).png" class="d-block w-100 rounded shadow" alt="Content Templates">
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="carousel-item">
+          <img src="IM/Presentation.png" class="d-block w-100 rounded shadow" alt="Custom Projects">
+        </div>
+
       </div>
-    </section>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#servicesCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#servicesCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="3"></button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    
+    <!-- CONTACT -->
+<section id="contact" class="container py-5">
+  <h2 class="section-title">Contact Me</h2>
+  <div class="row">
+    <div class="col-lg-6 text-white mb-4">
+      <p>If you’d like to work together or just say hello, feel free to drop me a message. I’ll get back to you as soon as possible!</p>
+      <ul class="list-unstyled">
+        <li><strong>Email:</strong> 
+          <a href="mailto:maryjoymula519@gmail.com" class="text-warning">maryjoymula519@gmail.com</a>
+        </li>
+        <li><strong>Phone:</strong> +63 9185471882</li>
+        <li><strong>Location:</strong> Philippines</li>
+      </ul>
+      <div class="social-links mt-3">
+        <a href="https://www.facebook.com/mula.danics" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/maryjoy_mula" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:maryjoymula519@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- FOOTER -->
     <footer class="text-white py-3">
